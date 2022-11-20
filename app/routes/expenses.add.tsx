@@ -31,15 +31,15 @@ const customStyles = {
 	},
 }
 
-function Index(): ReactElement {
+function AddExpensesPage(): ReactElement {
 	return (
 		<main style={ customStyles }>
       <h1 style={ customStyles.h1 }>
-        Home page
+        ExpensesAddPage
       </h1>
     </main>
 	);
 }
 
-export default Index;
+export default AddExpensesPage;
 // ########################################################
