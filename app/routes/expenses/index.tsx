@@ -2,6 +2,7 @@ import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import type { ReactElement } from 'react';
 // =========================================================
 
+/** default page for the `/expenses` route */
 // link to the dynamic route for notesId
 export const links: LinksFunction = () => {
 	return [{ rel: 'stylesheet', href: '' }];
@@ -31,15 +32,15 @@ const customStyles = {
 	},
 }
 
-function AddExpensesPage(): ReactElement {
+function ExpensesPage(): ReactElement {
 	return (
 		<main style={ customStyles }>
       <h1 style={ customStyles.h1 }>
-        ExpensesAddPage
+        ExpensesPage
       </h1>
     </main>
 	);
 }
 
-export default AddExpensesPage;
+export default ExpensesPage;
 // ########################################################
