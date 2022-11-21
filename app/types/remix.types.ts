@@ -1,4 +1,4 @@
-// types.ts
+// remix.types.ts
 import type { DataFunctionArgs } from "@remix-run/node"
 // ============================================================
 

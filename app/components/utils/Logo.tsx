@@ -1,23 +1,25 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import type { ReactElement } from 'react';
-import AuthForm from '~/components/auth/AuthForm';
-import authStyles from '~/styles/auth.css';
 // =========================================================
 
 // link to the dynamic route for notesId
-export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: authStyles }
-];
+export const links: LinksFunction = () => {
+  return [{ rel: 'stylesheet', href: '' }];
+};
 
 export const meta: MetaFunction = () => ({
-  title: 'Auth Page',
-  description: 'Login page for the app',
+  title: 'PLACE_HOLDER',
+  description: 'PLACE_HOLDER',
 });
 // =========================================================
 
-function AuthPage(): ReactElement {
-  return <AuthForm />;
+function Logo(): ReactElement {
+  return (
+    <h1 id="logo">
+      <a href="/">RemixExpenses</a>
+    </h1>
+  );
 }
 
-export default AuthPage;
+export default Logo;
 // ########################################################
