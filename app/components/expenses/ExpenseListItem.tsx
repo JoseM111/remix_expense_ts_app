@@ -1,4 +1,5 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
+import { Link } from '@remix-run/react';
 import type { ReactElement } from 'react';
 import type { ExpenseType } from '~/types/Expenses.types';
 // =========================================================
@@ -7,14 +8,9 @@ import type { ExpenseType } from '~/types/Expenses.types';
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: '' }];
 };
-
-export const meta: MetaFunction = () => ({
-  title: 'PLACE_HOLDER',
-  description: 'PLACE_HOLDER',
-});
 // =========================================================
 
-function ExpenseListItem({ title, amount }: ExpenseType): ReactElement {
+function ExpenseListItem({ id, title, amount }: ExpenseType): ReactElement {
   function deleteExpenseItemHandler() {
     // tbd
   }
@@ -27,7 +23,8 @@ function ExpenseListItem({ title, amount }: ExpenseType): ReactElement {
       </div>
       <menu className="expense-actions">
         <button onClick={deleteExpenseItemHandler}>Delete</button>
-        <a href="tbd">Edit</a>
+        {/* id: is a relative link */}
+        <Link to={id}>Edit</Link>
       </menu>
     </article>
   );

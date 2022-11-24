@@ -1,4 +1,5 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
+import { Link } from "@remix-run/react"
 import type { ReactElement } from 'react';
 // =========================================================
 
@@ -6,11 +7,6 @@ import type { ReactElement } from 'react';
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: '' }];
 };
-
-export const meta: MetaFunction = () => ({
-  title: 'PLACE_HOLDER',
-  description: 'PLACE_HOLDER',
-});
 // =========================================================
 
 function ExpenseForm(): ReactElement {
@@ -42,7 +38,10 @@ function ExpenseForm(): ReactElement {
       </div>
       <div className="form-actions">
         <button>Save Expense</button>
-        <a href="tbd">Cancel</a>
+        {/*.. means you want to return to the parent route.
+           sort of how it works in the terminal to go back one level,
+           which in this case would be the parent route of `/expenses` */}
+        <Link to="..">Cancel</Link>
       </div>
     </form>
   );

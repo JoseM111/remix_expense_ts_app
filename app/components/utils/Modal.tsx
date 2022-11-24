@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
 import type { ReactElement } from 'react';
 import type { ModalType } from "~/types/WithChildren.types"
 // =========================================================
@@ -7,11 +7,6 @@ import type { ModalType } from "~/types/WithChildren.types"
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: '' }];
 };
-
-export const meta: MetaFunction = () => ({
-  title: 'PLACE_HOLDER',
-  description: 'PLACE_HOLDER',
-});
 // =========================================================
 
 function Modal({ children, onClose }: ModalType): ReactElement {

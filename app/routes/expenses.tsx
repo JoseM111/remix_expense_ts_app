@@ -12,8 +12,8 @@ export const links: LinksFunction = () => [
 ];
 // =========================================================
 export const meta: MetaFunction = () => ({
-  title: 'PLACE_HOLDER',
-  description: 'PLACE_HOLDER',
+  title: 'Expenses Layout Page',
+  description: '',
 });
 // =========================================================
 

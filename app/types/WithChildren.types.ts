@@ -22,6 +22,6 @@ export type ErrorType = WithChildren<{
 }>
 
 export type ModalType = WithChildren<{
-  onClose?: () => {};
+  onClose?: () => void;
 }>;
 

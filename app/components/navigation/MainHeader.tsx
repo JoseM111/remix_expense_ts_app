@@ -1,16 +1,12 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
 import type { ReactElement } from 'react';
+import Logo from "~/components/utils/Logo"
 // =========================================================
 
 // link to the dynamic route for notesId
 export const links: LinksFunction = () => {
 	return [{ rel: 'stylesheet', href: '' }];
 };
-
-export const meta: MetaFunction = () => ({
-	title: 'PLACE_HOLDER',
-	description: 'PLACE_HOLDER'
-});
 // =========================================================
 
 function MainHeader(): ReactElement {

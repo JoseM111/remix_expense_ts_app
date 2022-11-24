@@ -1,8 +1,15 @@
 // Marketing.types.ts
+import type { IconType } from 'react-icons';
+// =======================================================
 
 export type PricingType = {
-	title: string;
-	price: number;
-	perks: Array<any>;
-	icon: string;
+	id: string;
+  title: string;
+  price: string;
+  perks: Array<string>;
+  icon: IconType;
 };
+
+export type PricingListType = {
+	pricingList: Array<PricingType>;
+}

@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import MainHeader from '~/components/navigation/MainHeader';
 import sharedStyles from '~/styles/shared.css';
 // =======================================================
 
@@ -40,7 +41,11 @@ export default function App() {
         <Links />
         <title>Remix Expense App</title>
       </head>
+      {/*body-section*/}
       <body>
+        {/*- MAIN-HEADER -*/}
+        <MainHeader />
+
         <Outlet />
         <ScrollRestoration />
         <Scripts />

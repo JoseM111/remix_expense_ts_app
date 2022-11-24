@@ -1,6 +1,8 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import type { ReactElement } from 'react';
+//import { useNavigate } from 'react-router';
 import ExpenseForm from '~/components/expenses/ExpenseForm';
+import Modal from '~/components/utils/Modal';
 // =========================================================
 
 // link to the dynamic route for notesId
@@ -15,9 +17,20 @@ export const meta: MetaFunction = () => ({
 // =========================================================
 
 function AddExpensesPage(): ReactElement {
+  //const navigate = useNavigate();
+
+  //function closeHandler() {
+  //  // navigate programmatically
+  //  navigate('..');
+  // works like below ⤵️
+  // <Modal onClose={closeHandler}>
+  //}
+
   return (
-    /** EXPENSE_FORM COMPONENT*/
-    <ExpenseForm />
+    <Modal>
+      {/*- EXPENSE_FORM COMPONENT -*/}
+      <ExpenseForm />
+    </Modal>
   );
 }
 
